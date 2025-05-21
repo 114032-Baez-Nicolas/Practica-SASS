@@ -1,0 +1,57 @@
+@mixin grided-body($header, $main, $footer) {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr 4fr 1fr;
+    grid-template-areas: "#{$header} #{$header} #{$header}"
+    "#{$main} #{$main} #{$main}"
+    "#{$footer} #{$footer} #{$footer}";
+}
+
+@mixin grided-main($main1, $main2, $main3) {
+    display: grid;
+    grid-template-areas: "#{$main1} #{$main2} #{$main3}";
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 50px
+}
+
+@mixin header-footer($area, $color, $padding, $font-size) {
+    grid-area: $area;
+    background-color: $color;
+    padding: $padding;
+    font-size: $font-size;
+    display: flex;
+    color: white;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+@mixin card($card ,$color, $padding) {
+    grid-area: $card;
+    background-color: $color;
+    padding: $padding;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s;
+
+    &:hover {
+        transform: scale(1.05);
+    }
+}
+
+// responsive
+@mixin mobile {
+    @media (max-width: 480px) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media (max-width: 768px) {
+        @content;
+    }
+}
