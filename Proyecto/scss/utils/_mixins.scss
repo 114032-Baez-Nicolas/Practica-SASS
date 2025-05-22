@@ -1,0 +1,95 @@
+/* -------------------- MIXINS GENERALES -------------------- */
+
+// Sombra suave
+@mixin sombra-suave {
+    box-shadow: 0 4px 10px $sombra-suave;
+}
+
+// Sombra fuerte
+@mixin sombra-fuerte {
+    box-shadow: 0 8px 20px $sombra-fuerte;
+}
+
+// Transición suave estándar
+@mixin transicion-suave {
+    transition: all 0.3s ease;
+}
+
+// Flexbox centrado en ambos ejes
+@mixin flex-centro {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+// Flexbox en columna centrado
+@mixin flex-columna-centro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+// Tamaño máximo centrado
+@mixin contenedor-limitado($ancho-max: 850px) {
+    width: 100%;
+    max-width: $ancho-max;
+    margin: 0 auto;
+}
+
+// Estilo base para botones redondeados
+@mixin boton-redondeado($bg-color, $text-color) {
+    background-color: $bg-color;
+    color: $text-color;
+    padding: 12px 50px;
+    border-radius: 50px;
+    font-weight: bold;
+    text-decoration: none;
+    @include sombra-fuerte;
+    @include transicion-suave;
+}
+
+//
+// -------------------- ANIMACIONES --------------------
+//
+
+// Keyframes para animaciones
+@keyframes aparecer {
+    0% {
+        transform: scale(0.95);
+        opacity: 0;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+// Mixin para aplicar la animación de aparecer
+@mixin animacion-aparecer($duracion: 0.5s, $modo: ease-out) {
+    animation: aparecer $duracion $modo;
+}
+
+// Mixin para fade-in
+@mixin animacion-fade-in($duracion: 0.5s, $modo: ease-out) {
+    animation: fade-in $duracion $modo;
+}
+
+// Mixin para hover con escala suave
+@mixin hover-escalar($escala: 1.05) {
+    transition: transform 0.3s ease;
+
+    &:hover {
+        transform: scale($escala);
+    }
+}

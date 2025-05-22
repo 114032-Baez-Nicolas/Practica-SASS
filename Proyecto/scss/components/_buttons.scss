@@ -1,0 +1,9 @@
+// -------------------- BUTTONS --------------------
+.btn-flotante {
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 1001;
+    @include boton-redondeado($azul-oscuro, $blanco-puro);
+    @include hover-escalar(1.05);
+}
