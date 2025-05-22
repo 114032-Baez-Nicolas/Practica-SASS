@@ -1,0 +1,55 @@
+@mixin body ($header, $main, $footer) {
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr 6fr 1fr;
+    grid-template-areas:
+    "#{$header} #{$header} #{$header}"
+    "#{$main} #{$main} #{$main}"
+    "#{$footer} #{$footer} #{$footer}"
+    ;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+@mixin header-footer ($type, $backcolor, $padding, $fontsize, $textcolor){
+    grid-area: $type;
+    background-color: $backcolor;
+    padding: $padding;
+    font-size: $fontsize;
+    color: $textcolor;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+}
+
+@mixin main ($type1, $type2, $type3) {
+    grid-area: main;
+    display: grid; 
+    grid-template-areas: 
+    "#{$type1} #{$type2} #{$type3}";
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+@mixin section ($type) {
+    grid-area: $type;
+    background-color: #c7c7c7;
+    padding: 80px;
+    font-size: 1rem;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    &:hover {
+        transform: scale(1.05);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }
+}
