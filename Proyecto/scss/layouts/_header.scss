@@ -25,11 +25,11 @@
         transform: scale(1.05);
     }
 
-    @media (max-width: 576px) {
+    @include mobile {
         width: 60px;
     }
 
-    @media (min-width: 577px) and (max-width: 768px) {
+    @include tablet {
         width: 70px;
     }
 }

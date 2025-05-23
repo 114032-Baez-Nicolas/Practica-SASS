@@ -12,7 +12,15 @@
         "main main main"
         "footer footer footer";
 
-    @media (max-width: 768px) {
+    @include tablet {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "header"
+            "main"
+            "footer";
+    }
+
+    @include mobile {
         grid-template-columns: 1fr;
         grid-template-areas:
             "header"
