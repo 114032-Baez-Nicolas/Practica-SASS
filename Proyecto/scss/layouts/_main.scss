@@ -1,0 +1,27 @@
+// -------------------- MAIN --------------------
+.layout__main {
+    grid-area: main;
+    @include flex-centro;
+    padding: 20px;
+    text-align: center;
+}
+
+.motos__contenedor {
+    @include contenedor-limitado(850px);
+}
+
+.motos__titulo {
+    font-size: 28px;
+
+    @media (max-width: 576px) {
+        font-size: 22px;
+    }
+
+    @media (min-width: 577px) and (max-width: 768px) {
+        font-size: 24px;
+    }
+
+    @media (min-width: 769px) and (max-width: 992px) {
+        font-size: 26px;
+    }
+}

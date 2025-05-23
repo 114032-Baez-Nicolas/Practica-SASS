@@ -1,5 +1,8 @@
 // -------------------- TABLE --------------------
 .motos__tabla {
+    @include contenedor-limitado(900px);
+    margin-top: 2rem;
+
     table {
         width: 100%;
         border-collapse: collapse;
