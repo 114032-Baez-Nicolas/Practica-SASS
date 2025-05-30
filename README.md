@@ -9,3 +9,9 @@ Este repositorio contiene una colección de ejercicios prácticos realizados dur
 - SASS (SCSS)
 - Bootstrap 5
 - SweetAlert2 (en algunas prácticas)
+
+## 📌 Objetivo
+
+- Aplicar conceptos aprendidos clase a clase.
+- Mejorar la lógica y la escritura de código estructurado.
+- Tener una base sólida para proyectos más grandes.
