@@ -1,0 +1,26 @@
+.layout__main {
+    grid-area: main;
+    text-align: center;
+    padding: 1rem;
+    @include flex-columm-center;
+
+    .vehiculos__title {
+        @include tablet {
+            font-size: 1.5rem;
+        }
+
+        @include mobile {
+            font-size: 1.25rem;
+        }
+    }
+
+    .vehiculos__description {
+        @include tablet {
+            font-size: 1rem;
+        }
+
+        @include mobile {
+            font-size: 0.875rem;
+        }
+    }
+}

@@ -1,0 +1,11 @@
+footer {
+    @include header-footer(footer, #333, 20px, 1rem, white);
+
+    @include mobile {
+        @include rheader-rfooter(footer, 20px, 0.9rem);
+    }
+
+    @include tablet {
+        @include rheader-rfooter(footer, 20px, 1rem);
+    }
+}
