@@ -1,0 +1,20 @@
+@import 'responsive';
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+    @include body(header, main, footer);
+
+    @include mobile {
+        @include rbody(header, main, footer);
+    }
+
+    @include tablet {
+        @include rbody(header, main, footer);
+    }
+}

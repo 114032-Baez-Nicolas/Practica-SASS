@@ -1,0 +1,20 @@
+.cards__section1,
+.cards__section2 {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 1rem;
+
+    .card{
+        width: 18rem;
+        @include card;
+    }
+
+    .card-img-top {
+        height: 15rem;
+        @include card-img;
+    }
+
+    .card-body {
+        @include card-body;
+    }
+}

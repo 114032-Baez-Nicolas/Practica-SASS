@@ -1,0 +1,229 @@
+.bg-azul-primario {
+  background-color: #396390;
+}
+
+.text-azul-primario {
+  color: #396390;
+}
+
+.bg-azul-navy {
+  background-color: #023e8a;
+}
+
+.text-azul-navy {
+  color: #023e8a;
+}
+
+.bg-rojo-error {
+  background-color: #dc3545;
+}
+
+.text-rojo-error {
+  color: #dc3545;
+}
+
+.bg-verde-exito {
+  background-color: #198754;
+}
+
+.text-verde-exito {
+  color: #198754;
+}
+
+.bg-amarillo-alerta {
+  background-color: #ffc107;
+}
+
+.text-amarillo-alerta {
+  color: #ffc107;
+}
+
+.bg-naranja-accion {
+  background-color: #fd7e14;
+}
+
+.text-naranja-accion {
+  color: #fd7e14;
+}
+
+.bg-marron-hover {
+  background-color: #7b290c;
+}
+
+.text-marron-hover {
+  color: #7b290c;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  overflow-y: scroll;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+  word-break: break-word;
+}
+
+.layout__header {
+  grid-area: header;
+  text-align: center;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+.layout__header .navbar {
+  top: 0;
+  z-index: 1000;
+  background-color: #fff9f0;
+  border-bottom: 1px solid #333333;
+}
+.layout__header .navbar__logo {
+  width: 50px;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+.layout__header .navbar__logo:hover {
+  transform: scale(1.05);
+}
+
+.layout {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  grid-template-rows: repeat(3, auto);
+  grid-template-areas: "header header header" "main main main" "footer footer footer";
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  background-color: #fff9f0;
+}
+@media (min-width: 577px) and (max-width: 768px) {
+  .layout {
+    grid-template-columns: 1fr;
+    grid-template-areas: "header" "main" "footer";
+  }
+}
+@media (max-width: 576px) {
+  .layout {
+    grid-template-columns: 1fr;
+    grid-template-areas: "header" "main" "footer";
+  }
+}
+
+.layout__main {
+  grid-area: main;
+  text-align: center;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+@media (min-width: 577px) and (max-width: 768px) {
+  .layout__main .vehiculos__title {
+    font-size: 1.5rem;
+  }
+}
+@media (max-width: 576px) {
+  .layout__main .vehiculos__title {
+    font-size: 1.25rem;
+  }
+}
+@media (min-width: 577px) and (max-width: 768px) {
+  .layout__main .vehiculos__description {
+    font-size: 1rem;
+  }
+}
+@media (max-width: 576px) {
+  .layout__main .vehiculos__description {
+    font-size: 0.875rem;
+  }
+}
+
+.layout__footer {
+  grid-area: footer;
+  text-align: center;
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+@media (min-width: 577px) and (max-width: 768px) {
+  .layout__footer {
+    font-size: 1rem;
+  }
+}
+@media (max-width: 576px) {
+  .layout__footer {
+    font-size: 0.875rem;
+  }
+}
+
+.transformers__carousel {
+  margin: auto;
+  width: 100%;
+  max-width: 1200px;
+  max-width: 850px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+@media (min-width: 577px) and (max-width: 768px) {
+  .transformers__carousel {
+    width: 90%;
+    height: auto;
+  }
+}
+@media (max-width: 576px) {
+  .transformers__carousel {
+    width: 100%;
+    height: auto;
+  }
+}
+
+.cardsbots__section,
+.cardscons__section {
+  flex-wrap: wrap;
+  padding: 1rem;
+}
+.cardsbots__section .card,
+.cardscons__section .card {
+  width: 18rem;
+  border: none;
+  border-radius: 12px;
+  overflow: hidden;
+  background-color: #f7f9fc;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.cardsbots__section .card:hover,
+.cardscons__section .card:hover {
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+.cardsbots__section .card-img-top,
+.cardscons__section .card-img-top {
+  height: 15rem;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 0.3s ease;
+}
+.cardsbots__section .card-body,
+.cardscons__section .card-body {
+  background-color: #ffffff;
+  padding: 1rem;
+  text-align: center;
+}
+.cardsbots__section .card-body p,
+.cardscons__section .card-body p {
+  color: #6c757d;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+/*# sourceMappingURL=style.css.map */

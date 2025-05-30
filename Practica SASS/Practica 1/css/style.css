@@ -1,0 +1,88 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  font-family: "Courier New", Courier, monospace;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr 4fr 1fr;
+  grid-template-areas: "header header header" "main main main" "footer footer footer";
+}
+
+header {
+  grid-area: header;
+  background-color: orange;
+  padding: 20px;
+  font-size: 1rem;
+  display: flex;
+  color: white;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+main {
+  grid-area: main;
+  display: grid;
+  grid-template-areas: "card1 card2 card3";
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 50px;
+}
+main .card1 {
+  grid-area: card1;
+  background-color: #d0d0d0;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s;
+}
+main .card1:hover {
+  transform: scale(1.05);
+}
+main .card2 {
+  grid-area: card2;
+  background-color: #d0d0d0;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s;
+}
+main .card2:hover {
+  transform: scale(1.05);
+}
+main .card3 {
+  grid-area: card3;
+  background-color: #d0d0d0;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s;
+}
+main .card3:hover {
+  transform: scale(1.05);
+}
+
+footer {
+  grid-area: footer;
+  background-color: gray;
+  padding: 20px;
+  font-size: 0.8rem;
+  display: flex;
+  color: white;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+/*# sourceMappingURL=style.css.map */

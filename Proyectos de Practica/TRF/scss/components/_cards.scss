@@ -1,0 +1,19 @@
+.cardsbots__section,
+.cardscons__section {
+    flex-wrap: wrap;
+    padding: 1rem;
+
+    .card {
+        width: 18rem;
+        @include card;
+    }
+
+    .card-img-top {
+        height: 15rem;
+        @include card-img;
+    }
+
+    .card-body {
+        @include card-body;
+    }
+}
