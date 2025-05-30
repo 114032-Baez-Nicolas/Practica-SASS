@@ -1,5 +1,0 @@
-body{
-    min-height: 100vh;
-    font-family: 'Courier New', Courier, monospace;
-    @include grided-body(header, main, footer);
-}
