@@ -12,6 +12,13 @@
     align-items: center;
 }
 
+@mixin flex-wrap-center {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
 // Mixins for Navbar
 @mixin postition-sticky {
     position: sticky;
