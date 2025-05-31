@@ -13,6 +13,11 @@
     @include hover-navbarLogo;
 }
 
+@mixin transicion-hover-img {
+    transition: transform 0.3s ease;
+    @include hover-img;
+}
+
 // -------------------- HOVERS --------------------
 
 @mixin hover-card {
@@ -25,5 +30,11 @@
 @mixin hover-navbarLogo {
     &:hover {
         transform: scale(1.05);
+    }
+}
+
+@mixin hover-img {
+    &:hover {
+        transform: scale(1.01);
     }
 }

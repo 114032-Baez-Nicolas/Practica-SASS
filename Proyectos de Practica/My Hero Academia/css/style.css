@@ -100,6 +100,7 @@ html {
   z-index: 999;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
 }
 .layout__header .navbar {
@@ -126,6 +127,7 @@ html {
   font-size: 1.1rem;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
 }
 @media (max-width: 576px) {
@@ -147,6 +149,7 @@ html {
   color: #cccccc;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
 }
 @media (max-width: 576px) {
@@ -221,6 +224,80 @@ html {
   color: #6c757d;
   font-size: 0.95rem;
   line-height: 1.5;
+}
+
+.chacter__card {
+  padding: 10px;
+  border-radius: 20px;
+  width: 100%;
+  height: auto;
+  gap: 1rem;
+  color: #0a0a0a;
+  background-color: #e5e5e5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.3s ease;
+}
+.chacter__card:hover {
+  transform: scale(1.01);
+}
+.chacter__card .img-card {
+  width: 160px;
+  height: 240px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+.chacter__card .chacter__text {
+  text-align: left;
+  margin-top: 1rem;
+  flex: 1;
+}
+@media (min-width: 577px) and (max-width: 768px) {
+  .chacter__card {
+    flex-direction: column;
+    text-align: center;
+  }
+  .chacter__card .img-card {
+    width: 100%;
+    max-width: 300px;
+    height: 300px;
+  }
+  .chacter__card .chacter__text {
+    margin-top: 1rem;
+    padding: 10px;
+  }
+}
+@media (max-width: 576px) {
+  .chacter__card {
+    flex-direction: column;
+    text-align: center;
+  }
+  .chacter__card .img-card {
+    width: 100%;
+    max-width: 280px;
+    height: 280px;
+  }
+  .chacter__card .chacter__text {
+    margin-top: 1rem;
+    padding: 10px;
+  }
+}
+.chacter__card .personaje__rol {
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 0.2rem 0.6rem;
+  margin-left: 0.5rem;
+  border-radius: 6px;
+  text-transform: uppercase;
+}
+.chacter__card .personaje__rol.heroe {
+  background-color: #e6f4ea;
+  color: #198754;
+}
+.chacter__card .personaje__rol.villano {
+  background-color: #ffe3e3;
+  color: #dc3545;
 }
 
 /*# sourceMappingURL=style.css.map */

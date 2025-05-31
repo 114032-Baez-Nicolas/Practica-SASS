@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TRF — Inicio</title>
+    <title>MHA — Inicio</title>
     <link rel="stylesheet" href="./css/style.css">
 
     <!-- Bootstrap CSS -->
@@ -35,7 +35,7 @@
         </nav>
     </header>
 
-    <main class="layout__main">
+    <main class="layout__main animate__animated animate__fadeInUp">
         <section class="presentacion__section">
             <h1 class="presentacion__title">My Hero Academia</h1>
             <p class="presentacion__description">Explorá el increíble mundo de My Hero Academia a través de sus
@@ -131,26 +131,7 @@
 
     <!-- Script for Sweetalert2 -->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <script>
-        function mostrarAlertaConStock(mensaje) {
-            Swal.fire({
-                title: 'Stock Disponible',
-                text: mensaje,
-                icon: 'success',
-                confirmButtonText: 'Cerrar'
-            });
-        }
-    </script>
-    <script>
-        function mostrarAlertaSinStock(mensaje) {
-            Swal.fire({
-                title: 'Stock No Disponible',
-                text: mensaje,
-                icon: 'error',
-                confirmButtonText: 'Cerrar'
-            });
-        }
-    </script>
+
 </body>
 
 </html>
